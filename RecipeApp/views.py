@@ -97,10 +97,10 @@ def register(request):
         
         if user:
             messages.info(request, "usermame already exits")
-            return redirect('/register/')
+            return redirect('/')
         if email_user:
             messages.info(request, "email already exits")
-            return redirect('/register/')
+            return redirect('/')
                 
         user = User.objects.create(
             first_name = first_name,
